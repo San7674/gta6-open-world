@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rustport — Open World Crime</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800" aria-label="Rustport: an open-world crime game. Drive, steal cars, outrun the police and run missions for the Harbor crew."></canvas>
+  <div id="menu" class="overlay">
+    <div class="panel">
+      <h1>RUSTPORT</h1>
+      <p class="tag">A rust-belt port city. One ex-dockworker. Five jobs. No way out but through.</p>
+      <p class="story">Cole "Rook" Vane lost his dock job when the harbor dried up. Mara Kessler's
+      Harbor crew offered him one shift. One shift became a life. Drive the city, steal what
+      runs, dodge the Rustport PD, and finish the five jobs — or end up busted, broke, or worse.</p>
+      <div class="controls">
+        <div><b>W A S D</b> — move / drive</div>
+        <div><b>Shift</b> — sprint</div>
+        <div><b>E</b> — enter / exit car (steal it if it isn't yours)</div>
+        <div><b>Space</b> — handbrake &nbsp;·&nbsp; <b>F</b> — punch</div>
+        <div><b>T</b> — pick up a taxi fare</div>
+        <div><b>P / Esc</b> — pause &nbsp;·&nbsp; <b>M</b> — sound on/off</div>
+      </div>
+      <div class="buttons">
+        <button id="btn-start">Start new game</button>
+        <button id="btn-continue">Continue</button>
+      </div>
+      <p class="foot">Original game. Rustport, its people and its streets are invented — nothing here
+      is from any commercial game. Built for the make.fun gta6-01 bounty.</p>
+    </div>
+  </div>
+  <div id="pause" class="overlay hidden">
+    <div class="panel">
+      <h1>PAUSED</h1>
+      <p class="tag">The city waits. The cops don't, but the pause menu does.</p>
+      <div class="buttons">
+        <button id="btn-resume">Resume</button>
+        <button id="btn-save">Save game</button>
+        <button id="btn-restart">Restart story</button>
+      </div>
+      <p class="foot" id="pause-info"></p>
+    </div>
+  </div>
+  <div id="end" class="overlay hidden">
+    <div class="panel">
+      <h1 id="end-title">BUSTED</h1>
+      <p class="tag" id="end-text"></p>
+      <div class="buttons">
+        <button id="btn-again">Back on the street</button>
+      </div>
+    </div>
+  </div>
+  <p id="status" role="status" aria-live="polite"></p>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
